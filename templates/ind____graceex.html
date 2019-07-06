@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chart JS</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+
+//  var baseURL = "https://localhost:5000/";
+//  var state = estado;
+//  var variable = "/Probabilidad_Supervivencia";
+//  var sector = industria;
+
+// Assemble API query URL
+// var url = baseURL + "/"+ state + variable + sector;
+// http://localhost:5000/
+    var url = "http://localhost:5000/Aguascalientes/Probabilidad_Supervivencia/Comercio";
+    d3.json(url).then(function(response) {
+
+      var Probabilidad_Supervivencia = response.map(function(element) {
+      return element.Probabilidad_Supervivencia;
+      });
+      var perc_prob = Probabilidad_Supervivencia.map(e => (e * 100).toFixed(2) + '%');
+      
+      var Edad = response.map(function(element) {
+      return element.Edad;
+      });
+      
+      var ctx= document.getElementById('myChart').getContext('2d');
+
+      Chart.defaults.global.defaultFontFamily = 'Lato';
+      Chart.defaults.global.defaultFontSize = 18;
+      Chart.defaults.global.defaultFontColor = '#000';
+      
+      var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+      gradientStroke.addColorStop(0, "rgba(255, 51, 51, 0.6)");
+      gradientStroke.addColorStop(0.02, "rgba(255, 255, 0, 0.6)");
+      gradientStroke.addColorStop(1, "rgba(102, 204, 0, 0.6)");
+
+      var lifeChart= new Chart(ctx, {
+          type: 'bar' , // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+          data: {
+              labels: Edad,
+              datasets: [{
+                  label: 'Probability of Survival',
+                  data: Probabilidad_Supervivencia,             
+                  backgroundColor: gradientStroke,
+                  borderWidth: 1,
+                  borderColor: '#777',
+                  hoverBorderWidth: 3,
+                  hoverBorderColor: '#000'
+              }]
+
+          }, 
+          options: {
+              title:{
+            display:true,
+            text:'Probability of a company to survive depending on the age',
+            fontSize:25
+          },
+          legend:{
+            display:false,
+            position:'right',
+            labels:{
+              fontColor:'#000'
+            }
+          },
+          layout:{
+            padding:{
+              left:50,
+              right:0,
+              bottom:0,
+              top:0
+            }
+          },
+          tooltips:{
+            enabled:true
+          }
+        }
+      
+      });
+
+    });
+    </script>
+</body>
+</html>
+    
