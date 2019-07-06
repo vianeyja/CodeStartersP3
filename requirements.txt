@@ -9,4 +9,5 @@ SQLAlchemy==1.2.15
 Flask-SQLAlchemy==2.4.0
 zope.interface==4.6.0
 zope.sqlalchemy==1.1
+mysql-connector
 
