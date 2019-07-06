@@ -88,7 +88,7 @@ function createMap(markers) {
       },
       // Binding a pop-up to each layer
       onEachFeature: function(feature, layer) {
-        layer.bindPopup(feature.properties.estado + ", " + "<br>Total de empresas relacionadas a sector <br>" + data_sector + "<br>: <br>" +
+        layer.bindPopup(feature.properties.estado + ", " + "<br>Total de empresas relacionadas a sector <br>" + data_sector + ": " +
         feature.properties.Sector);
       }
     }).addTo(myMap);;
@@ -115,6 +115,5 @@ function createMap(markers) {
     // Adding legend to the map
         legend.addTo(myMap);
   });
-  $('#spinner').hide();
 };
 };

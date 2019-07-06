@@ -168,12 +168,6 @@ h1 {
   font: 9px Arial, Helvetica, sans-serif;
 }
 
-#spinner {
-  
-  transform: scale(0.7); /* Equal to scaleX(0.7) scaleY(0.7) */
- 
-}
-
 #myChart{
   height: 500px;
 }

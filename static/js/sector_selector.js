@@ -43,7 +43,6 @@ if(container != null){
 container._leaflet_id = null;
 }
 document.getElementById('map').innerHTML = "<div id='map' style='width: 100%; height: 100%;'></div>";
-$('#spinner').show();
 };
 
 function getData_estados(dataset) {

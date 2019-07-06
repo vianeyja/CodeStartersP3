@@ -94,17 +94,6 @@
                 <button id="actionButton" type="button" class="btn btn-primary btn-lg">Update</button>
 
               </div>
-              <!--
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 current"><i class="fas fa-home text-light fa-lg mr-3"></i>Dashboard</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-user text-light fa-lg mr-3"></i>Profile</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-envelope text-light fa-lg mr-3"></i>Inbox</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-shopping-cart text-light fa-lg mr-3"></i>Sales</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-chart-line text-light fa-lg mr-3"></i>Analytics</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-chart-bar text-light fa-lg mr-3"></i>Charts</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-table text-light fa-lg mr-3"></i>Tables</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-wrench text-light fa-lg mr-3"></i>Settings</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-file-alt text-light fa-lg mr-3"></i>Documentation</a></li>
-              </ul> -->
             </div>
             <!-- end of sidebar -->
 
@@ -114,20 +103,6 @@
                 <div class="col-md-12">
                   <h4 class="text-light text-uppercase mb-0">Analisis nacional de empresas por sector comercial</h4>
                 </div>
-                <!--<div class="col-md-5">
-                  <form>
-                    <div class="input-group">
-                      <input type="text" class="form-control search-input" placeholder="Search...">
-                      <button type="button" class="btn btn-white search-button"><i class="fas fa-search text-danger"></i></button>
-                    </div>
-                  </form>
-                </div>
-                <div class="col-md-3">
-                  <ul class="navbar-nav">
-                    <li class="nav-item icon-parent"><a href="#" class="nav-link icon-bullet"><i class="fas fa-comments text-muted fa-lg"></i></a></li>
-                    <li class="nav-item icon-parent"><a href="#" class="nav-link icon-bullet"><i class="fas fa-bell text-muted fa-lg"></i></a></li>
-                    <li class="nav-item ml-md-auto"><a href="#" class="nav-link" data-toggle="modal" data-target="#sign-out"><i class="fas fa-sign-out-alt text-danger fa-lg"></i></a></li>
-                  </ul>-->
                 </div>
               </div>
             </div>
@@ -137,27 +112,6 @@
       </div>
     </nav>
     <!-- end of navbar -->
-
-    <!-- modal 
-    <div class="modal fade" id="sign-out">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Want to leave?</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          <div class="modal-body">
-            Press logout to leave
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-success" data-dismiss="modal">Stay Here</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Logout</button>
-          </div>
-        </div>
-      </div>
-    </div>
-     end of modal -->
-
     <!-- cards -->
     <section>
       <div class="container-fluid">
@@ -166,9 +120,6 @@
             <div class="row pt-md-5 mt-md-3 mb-5">
               <div class="col-xl-6 col-sm-12 p-2">
                 <div class="card card-common">
-                <div id="spinner" style="display:none;z-index:100" class="text-center">
-                          <img id="img-spinner" src="static/images/spinner.gif" alt="Loading"/>
-                        </div>
                   <div id="map" class="card-body" style = "height: 500px">
                     <div class="d-flex justify-content-between">
                       <div class="text-right text-secondary">
@@ -197,7 +148,7 @@
                   </div>
                   <div class="card-footer text-secondary">
                     <i class="fas fa-chart-line mr-3"></i>
-                    <span>Grafica 1</span>
+                    <span>Sobrevivientes</span>
                   </div>
                 </div>
               </div>
@@ -215,7 +166,7 @@
                   </div>
                   <div class="card-footer text-secondary">
                     <i class="fas fa-chart-line mr-3"></i>
-                    <span>Grafica 2</span>
+                    <span>Probabilidad Supervivencia</span>
                   </div>
                 </div>
               </div>
@@ -233,7 +184,7 @@
                   </div>
                   <div class="card-footer text-secondary">
                     <i class="fas fa-chart-line mr-3"></i>
-                    <span>Grafica 3</span>
+                    <span>Esperanza de Vida</span>
                   </div>
                 </div>
               </div>
@@ -250,23 +201,6 @@
         <div class="row">
           <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
             <div class="row border-top pt-3">
-              <!--
-              <div class="col-lg-6 text-center">
-                <ul class="list-inline">
-                  <li class="list-inline-item mr-2">
-                    <a href="#" class="text-dark">CodeAndCreate</a>
-                  </li>
-                  <li class="list-inline-item mr-2">
-                    <a href="#" class="text-dark">About</a>
-                  </li>
-                  <li class="list-inline-item mr-2">
-                    <a href="#" class="text-dark">Support</a>
-                  </li>
-                  <li class="list-inline-item mr-2">
-                    <a href="#" class="text-dark">Blog</a>
-                  </li>
-                </ul>
-              </div>-->
               <div class="col-lg-12 text-right">
                 <p>&copy; Analytics powered by <span class="text-success">#Codestarters </span><i class="fas fa-poop"></i></p>
               </div>

@@ -42,7 +42,7 @@ function myChart(estado, sector){
             options: {
                 title:{
                 display:true,
-                text:'Number of surviving companies of each age',
+                text:'Numero de empresas sobrevivientes por edad',
                 fontSize:25
             },
             legend:{
@@ -115,7 +115,7 @@ function myChart2(estado, sector){
               options: {
                   title:{
                 display:true,
-                text:'Probability of a company to survive depending on its age',
+                text:'Probabilidad de sobreviviencia de empresas dependiendo edad',
                 fontSize:25
               },
               legend:{
@@ -187,7 +187,7 @@ function myChart3(estado, sector){
             options: {
                 title:{
             display:true,
-            text:'Additional Life Expectancy of a Company depending on its Age',
+            text:'Expectativa de vida adicional dependiendo la edad',
             fontSize:25
             },
             legend:{
